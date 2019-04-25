@@ -1,0 +1,19 @@
+{
+    "name": "PID Controller",
+    "keywords": "PID, Controller, System",
+    "description": "PID - Controller for systems.",
+    "url": "https://github.com/magnusoy/Arduino-PID-Library",
+    "include": "KalmanFilter",
+    "authors":
+    [
+      {
+        "name": "Magnus Kvendseth Øye"
+      }
+    ],
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/magnusoy/Arduino-KalmanFilter-Library.git"
+    },
+    "frameworks": "arduino"
+  }
