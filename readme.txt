@@ -4,7 +4,7 @@ Installation
 --------------------------------------------------------------------------------
 
 To install this library, just place this entire folder as a subfolder in your
-Arduino/lib/targets/libraries folder.
+Arduino/libraries folder.
 
 When installed, this library should look like:
 
@@ -22,17 +22,17 @@ After this library is installed, you just have to start the Arduino application.
 You may see a few warning messages as it's built.
 
 To use this library in a sketch, go to the Sketch | Import Library menu and
-select KalmanFilter.  This will add a corresponding line to the top of your sketch:
-#include <KalmanFilter.h>
+select PID.  This will add a corresponding line to the top of your sketch:
+#include <PID.h>
 
 To stop using this library, delete that line from your sketch.
 
 Geeky information:
 After a successful build of this library, a new file named "Test.o" will appear
-in "Arduino/lib/targets/libraries/KalmanFilter". This file is the built/compiled library
+in "Arduino/lib/targets/libraries/PID". This file is the built/compiled library
 code.
 
 If you choose to modify the code for this library (i.e. "PID.cpp" or "PID.h"),
-then you must first 'unbuild' this library by deleting the "KalmanFilter.o" file. The
-new "KalmanFilter.o" with your code will appear after the next press of "verify"
+then you must first 'unbuild' this library by deleting the "PID.o" file. The
+new "PID.o" with your code will appear after the next press of "verify"
 
