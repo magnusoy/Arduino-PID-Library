@@ -3,7 +3,7 @@
     "keywords": "PID, Controller, System",
     "description": "PID - Controller for systems.",
     "url": "https://github.com/magnusoy/Arduino-PID-Library",
-    "include": "KalmanFilter",
+    "include": "PID",
     "authors":
     [
       {
@@ -13,7 +13,7 @@
     "repository":
     {
       "type": "git",
-      "url": "https://github.com/magnusoy/Arduino-KalmanFilter-Library.git"
+      "url": "https://github.com/magnusoy/Arduino-PID-Library.git"
     },
     "frameworks": "arduino"
   }
