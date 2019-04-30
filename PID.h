@@ -10,19 +10,22 @@
 class PID {
 
 public:
+	//Defining Constants
 	#define DIRECT  0
     #define REVERSE  1
 
+	// Defining Functions
 	PID(double kp, double ki, double kd, int direction);
 	double compute(double actual, double target);
 	void setParams(double kp, double ki, double kd);
 	void setUpdateTime(unsigned long updateTime);
 	void setDirection(int direction);
-	void setOffset(double offset);
-	void setLimits(double low, double high);
+	void setOutputOffset(double offset);
+	void setOutputLimits(double low, double high);
 	bool reset();
 
 private:
+	// Defining varibales
 	double kp;
 	double ki;
 	double kd;

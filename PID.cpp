@@ -1,6 +1,15 @@
 #include "PID.h"
 #include "math.h"
 
+/*
+	PID constructor, initializing controller terms
+	and direction.
+
+	@param kp - proportional gain factor
+	@param ki - integral gain factor
+	@param kd  derivative gain factor
+	@param direction - DIRECT or REVERSE
+*/
 PID::PID(double kp, double ki, double kd, int direction)
 {
 	this->direction = direction;
@@ -8,6 +17,15 @@ PID::PID(double kp, double ki, double kd, int direction)
 	lastUpdateTime = millis();
 }
 
+/*
+	Computes the new output based on controller terms
+	and error.
+
+	@param actual - current value
+	@param target - wanted value
+
+	@return outputValue - calculated output
+*/
 double PID::compute(double actual, double target)
 {
 
@@ -32,6 +50,9 @@ double PID::compute(double actual, double target)
 	return outputValue;
 }
 
+/*
+	Resets the global variables.
+*/
 bool PID::reset()
 {
 	bool reset = false;
@@ -41,16 +62,39 @@ bool PID::reset()
 	outputValue = 0.0f;
 }
 
-void PID::setLimits(double low, double high)
+/*
+	Set the constrain limits for the output.
+
+	@param low - the lowest output
+	@param high - the highest output
+*/
+void PID::setOutputLimits(double low, double high)
 {
 	this->outputLimitLow = low;
 	this->outputLimitHigh = high;
 }
 
-void PID::setOffset(double offset) { this->offset = offset; }
+/*
+	Adds a offset on top of the output.
 
+	@param offset - the offset value to be added
+*/
+void PID::setOutputOffset(double offset) { this->offset = offset; }
+
+/*
+	Set the how often the output should update.
+
+	@param updateTime - update time in millis
+*/
 void PID::setUpdateTime(unsigned long updateTime) { this->updateTime = updateTime; }
 
+/*
+	Set the controller terms.
+
+	@param kp - proportional gain factor
+	@param ki - integral gain factor
+	@param kd  derivative gain factor
+*/
 void PID::setParams(double kp, double ki, double kd)
 {
 	if (direction == 0)
