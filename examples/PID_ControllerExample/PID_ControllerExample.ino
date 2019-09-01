@@ -18,7 +18,7 @@ void setup()
 void loop()
 {
   double actual = random(0, 100);
-  double output = pid.update(actual, target);
+  double output = pid.compute(actual, target);
 
   Serial.print(actual);
   Serial.print(",");
